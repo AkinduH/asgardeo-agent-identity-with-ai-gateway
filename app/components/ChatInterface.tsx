@@ -19,6 +19,7 @@ export default function ChatInterface({ orgName, userInfo, onSignOut, onReset }:
   const [inputMessage, setInputMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [selectedModel, setSelectedModel] = useState('Support-Coordinator');
+  const [targetUrl, setTargetUrl] = useState('https://kong-gateway-proxy-url.com/chat');
 
   const handleSendMessage = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -33,7 +34,7 @@ export default function ChatInterface({ orgName, userInfo, onSignOut, onReset }:
 
     try {
       const accessToken = sessionStorage.getItem('access-token') || '';
-      const url = 'https://kong-09be8d1757usnvnat.kongcloud.dev/chat';
+      const url = targetUrl;
       
       console.log("Target URL:", url);
       console.log("Model:", selectedModel);
@@ -131,20 +132,38 @@ export default function ChatInterface({ orgName, userInfo, onSignOut, onReset }:
 
       {/* Main Chat Area */}
       <main className="max-w-4xl mx-auto px-6 py-8 h-[calc(100vh-80px)] flex flex-col">
-        {/* Model Selection */}
-        <div className="mb-4">
-          <label htmlFor="model-select" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-            Select Model
-          </label>
-          <select
-            id="model-select"
-            value={selectedModel}
-            onChange={(e) => setSelectedModel(e.target.value)}
-            className="w-full md:w-64 px-4 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-          >
-            <option value="Support-Coordinator">Support-Coordinator</option>
-            <option value="Technical-Specialist">Technical-Specialist</option>
-          </select>
+        {/* Configuration Section */}
+        <div className="mb-4 space-y-4">
+          {/* Model Selection */}
+          <div>
+            <label htmlFor="model-select" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              Select Model
+            </label>
+            <select
+              id="model-select"
+              value={selectedModel}
+              onChange={(e) => setSelectedModel(e.target.value)}
+              className="w-full md:w-64 px-4 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+            >
+              <option value="Support-Coordinator">Support-Coordinator</option>
+              <option value="Technical-Specialist">Technical-Specialist</option>
+            </select>
+          </div>
+          
+          {/* Target URL Configuration */}
+          <div>
+            <label htmlFor="target-url" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              Kong Gateway Proxy URL
+            </label>
+            <input
+              id="target-url"
+              type="text"
+              value={targetUrl}
+              onChange={(e) => setTargetUrl(e.target.value)}
+              placeholder="https://kong-gateway-url.com/chat"
+              className="w-full px-4 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+            />
+          </div>
         </div>
 
         {/* Messages Container */}

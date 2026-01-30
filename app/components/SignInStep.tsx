@@ -49,14 +49,14 @@ export default function SignInStep({
                 <p><strong>Base URL:</strong> https://api.asgardeo.io/t/{config.orgName}</p>
                 <p><strong>Client ID:</strong> {config.clientId.substring(0, 10)}...</p>
                 <p className="mt-2 text-xs text-gray-700 dark:text-gray-300">
-                  <strong>Note:</strong> Before signing in, add a user at{' '}
+                  <strong>Note:</strong> Before signing in, create an agent at{' '}
                   <a
-                    href={`https://console.asgardeo.io/t/${config.orgName}/app/users`}
+                    href={`https://console.asgardeo.io/t/${config.orgName}/app/agents`}
                     target="_blank"
                     rel="noreferrer"
                     className="text-blue-600 dark:text-blue-400 underline"
                   >
-                    User Management
+                    Agents
                   </a>{' '}
                   to be used for sign in.
                 </p>
