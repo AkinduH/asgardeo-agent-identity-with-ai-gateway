@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Asgardeo Setup Wizard",
-  description: "Configure Asgardeo authentication for your Next.js application",
+  title: "Agent Simulator - Kong AI Gateway",
+  description: "Simulate agent authentication scenarios with Kong AI Gateway and Asgardeo",
 };
 
 export default function RootLayout({
