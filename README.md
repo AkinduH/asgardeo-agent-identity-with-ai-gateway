@@ -57,7 +57,7 @@ Before you begin, ensure you have the following:
 1. **Clone the repository:**
    ```bash
    git clone <repository-url>
-   cd asgardeo-with-kong-ai-gateway
+   cd asgardeo-and-ai-gateway-integration
    ```
 
 2. **Install dependencies:**
@@ -97,7 +97,7 @@ When you first launch the application, you'll be prompted to configure the follo
 1. Click the **Configuration** button in the application
 2. Fill in all required fields
 3. Click **Save Configuration**
-4. The settings are stored in your browser's local storage
+4. The settings are stored in your browser's session storage
 
 ---
 
