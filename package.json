@@ -1,5 +1,5 @@
 {
-  "name": "asgardeo-with-kong-ai-gateway",
+  "name": "asgardeo-and-ai-gateway-integration",
   "version": "0.1.0",
   "private": true,
   "scripts": {

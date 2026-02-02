@@ -5,7 +5,7 @@ export async function POST(request: NextRequest) {
     // Get the request body and headers from the client
     const body = await request.json();
     const model = request.headers.get("x-agent-type") || "Support-Coordinator";
-    const targetUrl = request.headers.get("x-target-url") || "https://kong-09be8d1757usnvnat.kongcloud.dev/chat";
+    const targetUrl = request.headers.get("x-target-url") || "https://ai-gateway-url.com/chat";
     const accessToken = request.headers.get("authorization");
 
     console.log("Proxy request to:", targetUrl);
@@ -13,7 +13,7 @@ export async function POST(request: NextRequest) {
     console.log("Has Access Token:", !!accessToken);
     console.log("Body:", body);
 
-    // Build headers for Kong Gateway
+    // Build headers for AI Gateway
     const headers: Record<string, string> = {
       "Content-Type": "application/json",
       "x-agent-type": model,
@@ -24,7 +24,7 @@ export async function POST(request: NextRequest) {
       headers["Authorization"] = accessToken;
     }
 
-    // Make the request to Kong Gateway from the server side (no CORS issues)
+    // Make the request to AI Gateway from the server side (no CORS issues)
     const response = await fetch(targetUrl, {
       method: "POST",
       headers,

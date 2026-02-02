@@ -249,7 +249,7 @@ export default function AgentSimulator({ config, onOpenConfig }: AgentSimulatorP
             <div>
               <h1 className="text-xl font-bold text-gray-900 dark:text-white">Agent Simulator</h1>
               <p className="text-sm text-gray-500 dark:text-gray-400">
-                Test Kong AI Gateway with different agent scenarios
+                Test AI Gateway with different agent scenarios
               </p>
             </div>
           </div>

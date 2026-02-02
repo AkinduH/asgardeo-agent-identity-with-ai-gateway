@@ -147,11 +147,11 @@ export default function ConfigurationModal({ isOpen, onClose, config, onSave }: 
                   type="url"
                   value={localConfig.targetUrl}
                   onChange={(e) => setLocalConfig({ ...localConfig, targetUrl: e.target.value })}
-                  placeholder="https://kong-gateway-url.com/chat"
+                  placeholder="https://ai-gateway-url.com/chat"
                   className="w-full px-4 py-2 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                 />
                 <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">
-                  Kong AI Gateway proxy URL endpoint
+                  AI Gateway proxy URL endpoint
                 </p>
               </div>
             </div>
