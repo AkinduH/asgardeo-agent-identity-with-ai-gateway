@@ -319,7 +319,7 @@ export default function AgentSimulator({ config, onOpenConfig }: AgentSimulatorP
                 />
                 <div className="flex-1">
                   <div className="flex items-center gap-2">
-                    <span className="font-medium text-gray-900 dark:text-white">Case 1: Correct Agent</span>
+                    <span className="font-medium text-gray-900 dark:text-white">Case 1:Agent on Correct Path</span>
                     <span className="px-2 py-0.5 text-xs font-medium rounded bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-400">
                       Expected: Success
                     </span>
@@ -346,7 +346,7 @@ export default function AgentSimulator({ config, onOpenConfig }: AgentSimulatorP
                 />
                 <div className="flex-1">
                   <div className="flex items-center gap-2">
-                    <span className="font-medium text-gray-900 dark:text-white">Case 2: Wrong Agent (Impersonation)</span>
+                    <span className="font-medium text-gray-900 dark:text-white">Case 2: Agent on Wrong Path (Impersonation)</span>
                     <span className="px-2 py-0.5 text-xs font-medium rounded bg-yellow-100 text-yellow-700 dark:bg-yellow-900/40 dark:text-yellow-400">
                       Expected: Denied
                     </span>
