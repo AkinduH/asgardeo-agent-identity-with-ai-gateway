@@ -88,12 +88,21 @@ When you first launch the application, you'll be prompted to configure the follo
 |-----------|-------------|---------|
 | **Organization Name** | Your Asgardeo organization identifier | `org123` |
 | **Client ID** | The Client ID from your Asgardeo Public Client | `abc123xyz` |
-| **AI Gateway Type** | Choose between **Kong AI Gateway** or **WSO2 AI Gateway** | `Kong AI Gateway`/ `WSO2 AI Gateway` |
-| **API Gateway URL** *(Kong)* | Single Kong AI Gateway endpoint URL (header-based routing) | `https://kong-gateway.example.com/api` |
-| **Support-Coordinator Proxy URL** *(WSO2)* | Dedicated WSO2 proxy URL for the Support-Coordinator agent | `https://wso2-gateway.example.com/coordinator/chat` |
-| **Technical-Specialist Proxy URL** *(WSO2)* | Dedicated WSO2 proxy URL for the Technical-Specialist agent | `https://wso2-gateway.example.com/expert/chat` |
 | **Support-Coordinator Credentials** | Agent ID and Agent Secret for the Support-Coordinator agent | - |
 | **Technical-Specialist Credentials** | Agent ID and Agent Secret for the Technical-Specialist agent | - |
+| **AI Gateway Type** | Choose between **Kong AI Gateway** or **WSO2 AI Gateway** | `Kong AI Gateway`/ `WSO2 AI Gateway` |
+
+#### Kong AI Gateway URLs
+| Parameter | Description | Example |
+|-----------|-------------|---------|
+| **API Gateway URL** | Single Kong AI Gateway endpoint URL (header-based routing) | `https://kong-gateway.example.com/api` |
+
+#### WSO2 AI Gateway URLs
+Make sure you get final urls from test console by excuting one time.
+| Parameter | Description | Example |
+|-----------|-------------|---------|
+| **Support-Coordinator Proxy URL** | Dedicated WSO2 proxy URL for the Support-Coordinator agent | `https://wso2-gateway.example.com/coordinator/chat` |
+| **Technical-Specialist Proxy URL** | Dedicated WSO2 proxy URL for the Technical-Specialist agent | `https://wso2-gateway.example.com/expert/chat` |
 
 > **Note:** The URL fields shown depend on the selected gateway type. Kong uses a single endpoint with `x-agent-type` header routing, while WSO2 uses separate proxy URLs per agent.
 
