@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 
-export type GatewayType = 'kong' | 'wso2';
+export type GatewayType = 'wso2' | 'kong';
 
 export interface AppConfig {
   gatewayType: GatewayType;
